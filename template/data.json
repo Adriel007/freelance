@@ -1,0 +1,75 @@
+{
+    "cards": [
+        {
+            "title": "Pizza de Mussarela",
+            "description": "Mussarela, orégano",
+            "price": 40.0,
+            "image": "",
+            "group": "0"
+        },
+        {
+            "title": "Pizza de Calabresa",
+            "description": "Calabresa, tomate, cebola",
+            "price": 50.0,
+            "image": "",
+            "group": "0"
+        },
+        {
+            "title": "Coca Cola 1L",
+            "description": "Pilsen",
+            "price": 10.0,
+            "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhAREhASEhAREhcWERcQEhAQFhAVFxIXGBURFRUYHSggGBooHRUVITEhJSkrLi46Fx8zODMsNygtLysBCgoKDg0OGhAQGzclHyUtLS03Li8uOCsvNy81NzE3LzctNS0wMSs3NysrLy8rLjErNSsrLjAvLTUrNzc3Nzc3NP/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABQYEBwgCAwH/xABGEAACAgEBBAYGBgYGCwAAAAAAAQIDEQQFEiExBhNBUWFxByIygZGhFCNCscHRUmJykqLwM1OCssLhFiQ0RGNzk6Okw9P/xAAaAQEBAAIDAAAAAAAAAAAAAAAAAQIDBAUG/8QAKREBAAICAAUBCAMAAAAAAAAAAAECAxEEEiExUZETFEFSYYHR8AUjof/aAAwDAQACEQMRAD8A3iAAAAAAAAAAAAAAAD8nJJNt4SWXnsXeQOs6ZaKrhK15/Vrsl2Z7F3JkjtzPUXYWfUf+ZpXpLGVbUppRWWuLzx3N3sXvONnzWpMRDtP47gsfEb559GzqfSHs+Tx101+1TcufL7JYtDrK7oRsqmpwlycf54HOWkjvNSi4vhFfaXJ+KNz+jJSWjaksfXSx4rdin80xizWtbUtnH/x+PBj56TPfXVbgAcl04AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD46ulThKLbSa9bGOK7UUnbHR6VldbXWxlhZcNzPLi2n+RebuT8eHx4fieNQ+RhasSzpktTtLXmi6KpJ789Q/Gda3ffuxZb+iOkVelqUW2pR3mnj1Zv28cM+1nn8iSqGjjhSiuycv4nvf4hWsQt8tr95ZAAM2sAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADxdYopt+7xfYgPMnmSXdxf3Jff8DxqGeqINLL9qTy/wAj53sgVs/K57s8PlNcPNHmDPN1e8sdq4rwa5EGeDH0Wo348eElwkvHv8mZBkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY0fXlvP2Y+z4vtkR/SjWShVGquTjdqJdXCS51rDdlq7moKWH3uPeV/W3NYhFvEVhcW+C732kF2cl3mLKWTR3pT2zKnTqqM5Kd0scG092PF/gjUH0qeMb8sd28/H838WNDs3rEubS957Vkf0l8TkPYWqm5vM5PgsZbeOJbtJqZcPWfxZdDoa2e5JWReV9tLtXb+ZKQkmk08prKa7U+05/0Oqly3pJNNPEmuD58jYHoj21Odeo0N83O7STzXKbblZp7G3Btvm01KP7o0NggAAAAAAAAAAAAAAAAAAAAAAAAAAAAKptO7f1dr+zpqo1x8LLcWWfwqn5kTa8s+kdSn9Kkub1dyfj1c+r+6GPcYdl/PgQaa9K2v6zWdWnwqgl73xf4FKJTpRe7NXqZS5u2Xuw8JfIiyiQ2JLFnmn+BcNIyl7Kli2Pv+4uGlmWBM6aRP8ARnXdRtLZ9+cRvctJb49Yt6r/ALkYL3lYrsPptTW9XR1v2qbK7YftwmnH54A6SABAAAAAAAAAAAAAAAAAAAAAAAAAAAGoelsnC++MG4Rds5Yg3Fb0puUpYXDLbbb7clZ3rJPdi5yk+Si5Sb8kiz9M4SeotxFvNjS4c3nkvE9z0zpf0WnCdUVbtG3MlmK9Z0b0fW3ccMR4vPmdbMTNpesxXrTDTp11+/vlRNRUuOYrOXnK457c+JF3wXHgvgi63bDsvttnKcIRnbJRk4yStk8zahDniKy5N8I4fFtETR0ZnOO9O2FOa3alOMpNVR52zx7CfZni+7gOWzd7xiiOsq5porHJEhRTKWd2MpYWXuxcsLveOSJDYOwI2qNkr4rTwhv6iUU/qln1asvg7GuOFnHjlZlobX3YxnVFU6aFj3IxaziGGt7tndNvGXndSb8SxXyxvmjeqRufRXLKpRxvRlHKyt6Mo5Xes8yS2FUp2QhOKlCTWYzSlGSz2p8GjN2HtGyyu6vULr9LCO/LrG5TjNvEI1SzlSlJ7qXLm/PLo1sLdVXGtNRjLDlJxbk03hJR4RguKil8yxHadtWW86tWa9o7t4AA7B5QAAAAAAAAAAAAAAAAAAAAAAAAAAFI2hTGWp0+UsfSrW+CzmG9JN+Hq4KjLacPo0rOt+vs1Ttsgm9+zCbri2uUFJ5b80uJZOkt065RtrS36r7ZJvGGlZhwfLvKJrtbVvNw0sYPLbU52WKL7lHgseDycHJOpei4LFz1+n43587jt4Tu09RpbtVpXdq65aeFS3U5c5Ybk7m+EctRTWcvgsIiOkO1KVTY43R1F2psc7VBSSag8U0vtjXHnjnLHYm8eNB0pspynVRODTxHqaqsPHB5hFZ8n8iv7Y2grsydFVVnfQpVp/tQbaz4rHvJN40304W0XiJ7R9Y/ET37rZrNPTp6qdHbPdppq6/U4e7LUWttQqXbxlGb8FBcsZMSGy68RvtrrrstXV0VKM+rd2G3KaTbUI5hF/rJ5IrXdJevddktNWtTCKird6cuTbUlV7OcttZzg/dZt2VlFVPVxUq4Sh1uXKclP28Z9nexxfFvjyy07NqsceDNER5mevX/AH7z99LLLTV1x6lJ7vrau91trEJNxoqg+e+16qXZvNrikYUa4w1sIQhGtR3YyVed1zX9Ju5fLe3o/wBk+f8Apk96UvotT3pVSacpc6uTzjwWOyOO18TG2LqnZqlY1iTllqPFLHdnsE2jcaa5w5Ipb2nifi6BABznnAAAAAAAAAAAAAAAAAAAAAAAAAAAa96U27nFvH11uMqLTfWc34YyuJUtVoFYo/pPgnDdblxXFxwm85W7nDec+BLdOdZmc68r1LrOGHnDlnnyxn8Cmu2S5Sa8m+7H3HX5LRzPU8FgtGKLROpLtmT3XOOJRUt1vikpNtKLyuD4EVqNFZx9X5x7s9/88uZn2a6xcrJcMY4vhh5WO7BGavUzkkpTk1FNJNt4W9vY+PE19HOjn+OivRzilvJR5+1KK4qKbi+PPiuHPPDmfdVRXOxP9hOXa1zeFy48O8wKORkRC6nyy4W1r7Dk8L2pY4448Eu/5ExsO6U7IOMVGEJLK585Jf4l3dpXmya6K3bt0Yv2ZOOfBqcZZ/hM6d3E4uv9UzHd0QADsXkgAAAAAAAAAAAAAAAAAAAAAAAAAAan1ulhZLVStW9NavULOZL1VqJqK4PsjhEJqNBSk3jGPGX5lj2osX62P6Opl/HCFn+Mr2slwl5GPs6z8G+vE5qxqLz6tXbV27bG2yEXHdjJpZis4MGW27n2x/dPG3441F37WfiskeT2dPDL3zP88+qX0W1bXOMcrD/VXcT9Vzfb8ipbP/pI+/7iy0svs6eE97z/ADz6pGLG0bpQosnXJwsik1KPBr1lnD7OB84M+upo6yEKv666qv8AftjH8RyV8MZ4jLbpNp9XUSZ+gGTSAAAAAAAAAAAAAAAAAAAAAAAAAADWvSSvd1utX6aps+NSr/8AUVXW9vkXLprVjXb39bo4r/pXWf8A2RTNZ2gan6UwxqZ+KT+X+REk50vj9fnvgvvZBgZWzv6Re/7ix0lc2b7a8mWOksDNgS+wqOs1mzK+/XVSflW3Y/7pD1stHo8q39rbOXZX19kvdQ4r5zQHQQAIAAAAAAAAAAAAAAAAAAAAAAAAAAAonpBX+taF99GqT909M1+JRteuLLn05sU9fRDPGjSWSkv+fdBRf/jyKpqoZbA1R0zX10f2PxZXyxdOf9oS7ofiyugZezPbXkyxVFe2UvrF5MstMCj7UxLv6I4Z2sv1NDbJe+2qP4lNriWz0aapVbX0uf8AeNPdSvNKNq/uAb7ABAAAAAAAAAAAAAAAAAAAAAAAAAAAGrtranf1Wut/4qqj4KqCi1+85v3kNbZzMi6WXqZfpavU581qJp/cQ+tsaT8gNadM7t7Uy8EkQJI9IJZ1Fnn+BHAZmyX9YvJlopkVXZz9de8sFVhRKRZk0avqbtFqE8fR9XVKT/Uc0pryabI2Fh+7STlTKCWZTcYxXfKUkkviwOrQAQAAAAAAAAAAAAAAAAAAAAAAAAAABp3aKVVuqhJ8tVfLyVl0rI/KaIXX4ayuKa4En6dNG61bZFerqYQb8Zxca5/w9X8WUfovtBbj005tzhlwbWOHbFcXntfxG11Otqh0jji+XkiNSyT/AEto+tjJdqa+D/zIzT0pcX2BHrT6Xtzhmbp7XF4fIitRe5PwXL8z7aS/7Mnz5fkBZKixdD9mvUa7Q1YzH6RGyfhClO158G4Rj/aKjs2/i4vsNy+hPZGZ6jWyXCMeoqbT4tuM7mu9cKlnwkijbIAIAAAAAAAAAAAAAAAAAAAAAAAAAAArfpA6N/T9HbRHCuS3qXLlvr7L8Gsrw4PsOatoaSynUNuMqrYT9aNi3ZReeUk/5fYdcnmVabTaTa5NpZXkzC1d9m7Fl5NxMbhx1t12q7Ntc63upqM4yg9x8pJSSfv7cGC962UKqouUrJKMYpcZyk8Ril5tHV3TToJo9pqH0iM42VrELaZKFkYt5cMtNSjnsaeOOMZZFdD/AEU6HZ961MJXXWxTVbvlBqrKw5RUYr1sNrLyZtUtQbe9Em0KYRdenlbuwTm4ShOTlhb2IJ5xngu3h4mvL6nCUoyTUotqSaaaa5prsZ28VrpL0D2fr5KzU6aMrUsb8JTqm13ScGt735COV+jmhu1Opo09CzddNRjnl3ylL9VJNvwTOvOj+yK9Jp6dNX7FUcZwk5ybzOx+MpNt+ZgdGehWg2e3LS6aNc5LEptzsm1wzHfm20uC4LC4FgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//9k=",
+            "group": "1"
+        },
+        {
+            "title": "Suco",
+            "description": "Laranja",
+            "price": 5.0,
+            "image": "",
+            "group": "1"
+        },
+        {
+            "title": "Sorvete",
+            "description": "Chocolate",
+            "price": 15.0,
+            "image": "",
+            "group": "2"
+        },
+        {
+            "title": "Barra",
+            "description": "Chocolate",
+            "price": 20.0,
+            "image": "",
+            "group": "2"
+        }
+    ],
+    "groups": [
+        "Comidas",
+        "Bebidas",
+        "Sobremesas"
+    ],
+    "special": {
+        "title": "Promoção",
+        "itemsID": [
+            2,
+            3,
+            4
+        ]
+    },
+    "info": {
+        "telephone": "(11) 99999-9999",
+        "whatsapp": "(11) 22222-2222",
+        "instagram": "@pizzaria-do-joão",
+        "address": "Avenida Paulista, 9999. São Paulo - SP, 00000-000",
+        "name": "Pizzaria do João",
+        "description": "Pizzaria de boa qualidade",
+        "background": "https://images8.alphacoders.com/369/369063.jpg"
+    },
+    "payment": {
+        "pix": "",
+        "card-credit": "",
+        "card-debit": "",
+        "boleto": "",
+        "cash": ""
+    }
+}
