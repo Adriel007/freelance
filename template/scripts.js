@@ -339,7 +339,6 @@ function confirmBuy(receive) {
 }
 
 function whatsApp(text) {
-  alert(`${document.getElementById("whatsapp").href}&text=${text}`);
   window.open(
     `${document.getElementById("whatsapp").href}?text=${encodeURIComponent(
       text
