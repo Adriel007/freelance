@@ -365,7 +365,7 @@ function finalize(text, options) {
       <div class="w-100 d-flex flex-row justify-content-center align-items-center flex-wrap">
         <div class="_hover w-25 p-2 m-2 bg-primary rounded" onclick="whatsApp(\`${text}\`, 'Dinheiro')">
           <i class="bi bi-cash-stack h1 text-white"></i>
-          <h5 id="cash" class="w-100 text-center text-white">Dinheiro</h5>
+          <h6 id="cash" class="w-100 text-center text-white">Dinheiro</h6>
         </div>
         ${Object.keys(options)
           .map(
@@ -373,7 +373,7 @@ function finalize(text, options) {
               `
         <div class="_hover w-25 p-2 m-2 bg-primary rounded" onclick="whatsApp(\`${text}\`, '${key}')">
           <i class="bi bi-${options[key]} h1 text-white"></i>
-          <h5 id="${options[key]}" class="w-100 text-center text-white">${key}</h5>
+          <h6 id="${options[key]}" class="w-100 text-center text-white">${key}</h6>
         </div>
         `
           )
