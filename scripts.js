@@ -188,7 +188,7 @@
                   data.cards[key.replace("item - ", "")].price.toFixed(2) *
                   JSON.parse(localStorage[key]).quantity
                 }</h4>
-              <input oninput="changeQuantity('${key}', this.value)" class="_quantity form-control w-25 p-0 text-right" placeholder="Quantidade" type="number" value="${
+              <input oninput="changeQuantity('${key}', this.value)" class="_quantity text-center form-control w-25 p-0 text-right" placeholder="Quantidade" type="number" value="${
                   JSON.parse(localStorage[key]).quantity
                 }" min="1">
             </div>
