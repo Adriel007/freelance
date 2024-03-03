@@ -288,14 +288,14 @@ function confirmBuy(receive) {
         const number = document.getElementById("input_number").value;
         const complement = document.getElementById("input_complement").value;
 
-        Swal.fire({
-          icon: "success",
-          title: "Confirmado!",
-          text: `Obrigado pelo seu pedido, ele será enviado ao WhatsApp.`,
-          showConfirmButton: false,
-          timer: 1500,
-        }).then(() => {
-          if (city && neighborhood && street && number) {
+        if (city && neighborhood && street && number) {
+          Swal.fire({
+            icon: "success",
+            title: "Confirmado!",
+            text: `Obrigado pelo seu pedido, ele será enviado ao WhatsApp.`,
+            showConfirmButton: false,
+            timer: 1500,
+          }).then(() => {
             whatsApp(`Olá, gostaria de fazer o pedido:
             Endereço: ${city}, ${neighborhood}, ${street}, Nº ${number}${
               complement ? `, complemento: ${complement}` : ""
@@ -311,8 +311,16 @@ function confirmBuy(receive) {
                   : ""
               )
               .join("")}`);
-          }
-        });
+          });
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Todos os campos são obrigatórios, exceto o complemento",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        }
       }
     });
   } else {
