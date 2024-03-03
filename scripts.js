@@ -279,49 +279,47 @@ function confirmBuy(receive) {
       showCancelButton: true,
       showConfirmButton: true,
       reverseButtons: true,
-    })
-      .then((result) => {
-        if (result.isConfirmed) {
-          const city = document.getElementById("input_city").value;
-          const neighborhood =
-            document.getElementById("input_neighborhood").value;
-          const street = document.getElementById("input_street").value;
-          const number = document.getElementById("input_number").value;
-          const complement = document.getElementById("input_complement").value;
+    }).then((result) => {
+      if (result.isConfirmed) {
+        const city = document.getElementById("input_city").value;
+        const neighborhood =
+          document.getElementById("input_neighborhood").value;
+        const street = document.getElementById("input_street").value;
+        const number = document.getElementById("input_number").value;
+        const complement = document.getElementById("input_complement").value;
 
-          if (city && neighborhood && street && number) {
-            whatsApp(`Olá, gostaria de fazer o pedido:
-          Endereço: ${city}, ${neighborhood}, ${street}, Nº ${number}${
-              complement ? `, complemento: ${complement}` : ""
-            }
-
-          Itens: ${Object.keys(localStorage)
-            .map((key) =>
-              key.includes("item")
-                ? `${JSON.parse(localStorage[key]).quantity} ${
-                    JSON.parse(localStorage[key]).title
-                  },
-                  `
-                : ""
-            )
-            .join("")}`);
-          }
-        }
-      })
-      .then(() => {
         Swal.fire({
           icon: "success",
           title: "Confirmado!",
-          text: `Obrigado pelo seu pedido, estamos redirecionando vocÊ ao WhatsApp.`,
+          text: `Obrigado pelo seu pedido, ele será enviado ao WhatsApp.`,
           showConfirmButton: false,
           timer: 1500,
+        }).then(() => {
+          if (city && neighborhood && street && number) {
+            whatsApp(`Olá, gostaria de fazer o pedido:
+            Endereço: ${city}, ${neighborhood}, ${street}, Nº ${number}${
+              complement ? `, complemento: ${complement}` : ""
+            }
+  
+            Itens: ${Object.keys(localStorage)
+              .map((key) =>
+                key.includes("item")
+                  ? `${JSON.parse(localStorage[key]).quantity} ${
+                      JSON.parse(localStorage[key]).title
+                    },
+                    `
+                  : ""
+              )
+              .join("")}`);
+          }
         });
-      });
+      }
+    });
   } else {
     Swal.fire({
       icon: "success",
       title: "Confirmado!",
-      text: `Obrigado pelo seu pedido, em breve enviaremos.`,
+      text: `Obrigado pelo seu pedido, ele será enviado ao WhatsApp.`,
       showConfirmButton: false,
       timer: 1500,
     }).then(() => {
@@ -343,12 +341,23 @@ function confirmBuy(receive) {
 }
 
 function whatsApp(text) {
-  window.open(
-    `${document.getElementById("whatsapp").href}?text=${encodeURIComponent(
-      text
-    )}`
-  );
-  localStorage.clear();
+  Swal.fire({
+    icon: "info",
+    title: "Alguma observação?",
+    input: "text",
+    inputAttributes: {
+      placeholder: "Exemplo: sem tomate, sem cebola...",
+    },
+  }).then((result) => {
+    if (result.isConfirmed) {
+      window.open(
+        `${document.getElementById("whatsapp").href}?text=${encodeURIComponent(
+          text + (result.value ? `\n\nObservações: ${result.value}` : "")
+        )}`
+      );
+      localStorage.clear();
+    }
+  });
 }
 
 function checkLocalStorage() {
