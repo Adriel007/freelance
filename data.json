@@ -66,10 +66,9 @@
         "background": "https://images8.alphacoders.com/369/369063.jpg"
     },
     "payment": {
-        "pix": "",
-        "card-credit": "",
-        "card-debit": "",
-        "boleto": "",
-        "cash": ""
+        "Pix": "qr-code",
+        "Débito": "credit-card",
+        "Crédito": "credit-card",
+        "Boleto": "file-earmark-break"
     }
 }

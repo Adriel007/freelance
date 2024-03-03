@@ -218,9 +218,9 @@
         const radio = [...document.getElementsByName("receive")];
 
         if (radio[0].checked) {
-          confirmBuy("local");
+          confirmBuy("local", data);
         } else if (radio[1].checked) {
-          confirmBuy("home");
+          confirmBuy("home", data);
         } else {
           Swal.fire({
             icon: "error",
@@ -265,7 +265,7 @@ function radioBTN(element) {
   element.classList.add("btn-primary");
 }
 
-function confirmBuy(receive) {
+function confirmBuy(receive, data) {
   if (receive === "home") {
     Swal.fire({
       title: "Endereço",
@@ -296,21 +296,25 @@ function confirmBuy(receive) {
             showConfirmButton: false,
             timer: 1500,
           }).then(() => {
-            whatsApp(`Olá, gostaria de fazer o pedido:
-            Endereço: ${city}, ${neighborhood}, ${street}, Nº ${number}${
-              complement ? `, complemento: ${complement}` : ""
-            }
+            finalize(
+              `*Olá, gostaria de fazer o pedido:*
+*Endereço:* ${city}, ${neighborhood}, ${street}, Nº ${number}${
+                complement ? `, complemento: ${complement}` : ""
+              }
   
-            Itens: ${Object.keys(localStorage)
-              .map((key) =>
-                key.includes("item")
-                  ? `${JSON.parse(localStorage[key]).quantity} ${
-                      JSON.parse(localStorage[key]).title
-                    },
-                    `
-                  : ""
-              )
-              .join("")}`);
+*Itens:*
+${Object.keys(localStorage)
+  .map((key) =>
+    key.includes("item")
+      ? `- ${JSON.parse(localStorage[key]).quantity} ${
+          JSON.parse(localStorage[key]).title
+        },
+`
+      : ""
+  )
+  .join("")}`,
+              data.payment
+            );
           });
         } else {
           Swal.fire({
@@ -331,24 +335,55 @@ function confirmBuy(receive) {
       showConfirmButton: false,
       timer: 1500,
     }).then(() => {
-      whatsApp(`Olá, gostaria de fazer o pedido:
-          Vou retirar no local
+      finalize(
+        `*Olá, gostaria de fazer o pedido:*
+- Vou retirar no local
 
-          Itens: ${Object.keys(localStorage)
-            .map((key) =>
-              key.includes("item")
-                ? `${JSON.parse(localStorage[key]).quantity} ${
-                    JSON.parse(localStorage[key]).title
-                  },
-                  `
-                : ""
-            )
-            .join("")}`);
+*Itens:*
+${Object.keys(localStorage)
+  .map((key) =>
+    key.includes("item")
+      ? `- ${JSON.parse(localStorage[key]).quantity} ${
+          JSON.parse(localStorage[key]).title
+        },
+`
+      : ""
+  )
+  .join("")}`,
+        data.payment
+      );
     });
   }
 }
 
-function whatsApp(text) {
+function finalize(text, options) {
+  Swal.fire({
+    icon: "question",
+    title: "Forma de pagamento",
+    showConfirmButton: false,
+    html: `
+      <div class="w-100 d-flex flex-row justify-content-center align-items-center flex-wrap">
+        <div class="_hover w-25 p-2 m-2 bg-primary rounded" onclick="whatsApp(\`${text}\`, 'Dinheiro')">
+          <i class="bi bi-cash-stack h1 text-white"></i>
+          <h5 id="cash" class="w-100 text-center text-white">Dinheiro</h5>
+        </div>
+        ${Object.keys(options)
+          .map(
+            (key) =>
+              `
+        <div class="_hover w-25 p-2 m-2 bg-primary rounded" onclick="whatsApp(\`${text}\`, '${key}')">
+          <i class="bi bi-${options[key]} h1 text-white"></i>
+          <h5 id="${options[key]}" class="w-100 text-center text-white">${key}</h5>
+        </div>
+        `
+          )
+          .join("")}
+      </div>
+    `,
+  });
+}
+
+function whatsApp(text, payment) {
   Swal.fire({
     icon: "info",
     title: "Alguma observação?",
@@ -360,7 +395,9 @@ function whatsApp(text) {
     if (result.isConfirmed) {
       window.open(
         `${document.getElementById("whatsapp").href}?text=${encodeURIComponent(
-          text + (result.value ? `\n\nObservações: ${result.value}` : "")
+          text +
+            `\n\nPagamento: ${payment}` +
+            (result.value ? `\n\nObservações: ${result.value}` : "")
         )}`
       );
       localStorage.clear();
