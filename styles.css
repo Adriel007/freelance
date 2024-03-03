@@ -37,6 +37,12 @@ body {
     flex-grow: 1;
 }
 
+.img-fit {
+    object-fit: contain;
+    object-position: center;
+  }
+  
+
 @keyframes slideInRight {
     from {
         transform: translateX(-100%);

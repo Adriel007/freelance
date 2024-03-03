@@ -26,7 +26,9 @@
               .map(
                 (item, index) => `
               <div class="carousel-item${index === 0 ? " active" : ""}">
-                <img src="https://via.placeholder.com/300" class="d-block w-100" alt="${
+                <img src="${
+                  data.cards[item].image
+                }" class="d-block w-100 img-fit" height="600" alt="${
                   data.cards[item].title
                 }">
                 <div class="carousel-caption d-none d-md-block">
@@ -92,9 +94,11 @@
                 (card) => `
               <div class="col-md-6 mb-4">
                 <div class="card h-100">
-                  <img src="https://via.placeholder.com/300" class="card-img-top img-fluid" alt="${
-                    card.title
-                  }">
+                  <img src="${
+                    card.image
+                  }" class="card-img-top img-fit" height="300" alt="${
+                  card.title
+                }">
                   <div class="card-body">
                     <h5 class="card-title">${card.title}</h5>
                     <p class="card-text">${card.description}</p>
